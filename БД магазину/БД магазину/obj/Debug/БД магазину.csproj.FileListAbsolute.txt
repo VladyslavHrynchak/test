@@ -1,0 +1,10 @@
+D:\Курсова 2021\БД магазину\БД магазину\bin\Debug\БД магазину.exe.config
+D:\Курсова 2021\БД магазину\БД магазину\bin\Debug\БД магазину.exe
+D:\Курсова 2021\БД магазину\БД магазину\bin\Debug\БД магазину.pdb
+D:\Курсова 2021\БД магазину\БД магазину\obj\Debug\БД магазину.csprojAssemblyReference.cache
+D:\Курсова 2021\БД магазину\БД магазину\obj\Debug\БД_магазину.Form1.resources
+D:\Курсова 2021\БД магазину\БД магазину\obj\Debug\БД_магазину.Properties.Resources.resources
+D:\Курсова 2021\БД магазину\БД магазину\obj\Debug\БД магазину.csproj.GenerateResource.cache
+D:\Курсова 2021\БД магазину\БД магазину\obj\Debug\БД магазину.csproj.CoreCompileInputs.cache
+D:\Курсова 2021\БД магазину\БД магазину\obj\Debug\БД магазину.exe
+D:\Курсова 2021\БД магазину\БД магазину\obj\Debug\БД магазину.pdb

@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace Kursoawa_PK_4
+{
+    public partial class Form2 : Form
+    {
+        public string connectionString = " Data Source=91.225.200.84,1433;Initial Catalog=clinic;User ID=doskich;Password=ovibiz06 ";
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InsertAuto(textBox1.Text, textBox2.Text, textBox3.Text, dateTimePicker1.Value.ToString("dd-MM-yyyy"), textBox4.Text, textBox5.Text);
+        }
+
+        public void InsertAuto(string name, string surname, string Contr, string birth, string Adress, string phone)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            // Оператор SQL
+            string sql = string.Format("Insert Into Pacient" +
+                   "(Name, Surname, Contraindication, Birthay, Adress, NumberOfPhone) Values(@Name, @Surname, @Contraindication, @Birthay, @Adress, @NumberOfPhone)");
+
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                // Добавить параметры
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Surname", surname);
+                cmd.Parameters.AddWithValue("@Contraindication", Contr);
+                cmd.Parameters.AddWithValue("@Birthay", birth);
+                cmd.Parameters.AddWithValue("@Adress", Adress);
+                cmd.Parameters.AddWithValue("@NumberOfPhone", phone);
+
+                cmd.ExecuteNonQuery();
+            }
+            conn.Close();
+        }
+    }
+}
